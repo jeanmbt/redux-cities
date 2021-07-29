@@ -1,11 +1,34 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const App = () => {
-  return (
-    <div className="app">
-      <p>React + Redux starter</p>
-    </div>
-  );
-};
+import cities from '../../data/cities';
+
+import CityList from './city_list';
+import ActiveCity from './active_city';
+
+class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      selectedCity: cities[0]
+    };
+  }
+
+  selectCity = (index) => {
+    return (
+      this.setState({ selectedCity: cities[index] })
+    );
+  }
+  render() {
+    
+    return (
+      <div className="app">
+        <CityList cities={cities} selectedCity={this.state.selectedCity} />
+        <ActiveCity selectedCity={this.state.selectedCity} />
+        
+      </div>
+    );
+  }
+}
 
 export default App;
