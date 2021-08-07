@@ -19,7 +19,7 @@ const CityList = (props) => {
   };
 
   return (
-    <div className="cities">
+    <div className="">
       {renderList()}
     </div>
   );

@@ -24,16 +24,18 @@ class App extends Component {
     
     return (
       <div className="app">
-        <CityList
-          cities={cities}
-          selectedCity={this.state.selectedCity}
-          selectCity={this.selectCity}
-        />
-        <ActiveCity
-          selectedCity={this.state.selectedCity}
-
-        />
-        
+        <div className="city-list">
+          <CityList
+            cities={cities}
+            selectedCity={this.state.selectedCity}
+            selectCity={this.selectCity}
+          />
+        </div>
+        <div className="active-city">
+          <ActiveCity
+            selectedCity={this.state.selectedCity}
+          />
+        </div>
       </div>
     );
   }

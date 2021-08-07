@@ -18,9 +18,9 @@ class City extends Component {
 
   render() {
     return (
-      <div>
-        <h1 className={`${this.props.selectedCity ? 'active-city' : ''}`} onClick={this.handleClick}> 
-          {this.props.name}</h1>
+      <div className="list-group-item">
+        <h3 className={`${this.props.selectedCity ? 'active-city' : ''}`} onClick={this.handleClick}> 
+          {this.props.name}</h3>
       </div>
     );
   }
