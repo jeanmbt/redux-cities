@@ -1,21 +1,12 @@
 import React, { Component } from 'react';
 
+/* eslint-disable react/prefer-stateless-function */
 class ActiveCity extends Component {
-  
-  // handleClick = () => {
-  //   const { selectFlat, index } = this.props;
-
-  //   selectFlat(index);
-  //   console.log(selectFlat(index));
-  // }
-
   render() {
-
     return (
       <div>
         <h1>{this.props.selectedCity.name}</h1>
         <h3>{this.props.selectedCity.address}</h3>
-        
       </div>
     );
   }
