@@ -10,7 +10,8 @@ class App extends Component {
     super(props);
 
     this.state = {
-      selectedCity: cities[0]
+      selectedCity: cities[0],
+      citiesList: cities
     };
   }
 
@@ -23,8 +24,15 @@ class App extends Component {
     
     return (
       <div className="app">
-        <CityList cities={cities} selectedCity={this.state.selectedCity} />
-        <ActiveCity selectedCity={this.state.selectedCity} />
+        <CityList
+          cities={cities}
+          selectedCity={this.state.selectedCity}
+          selectCity={this.selectCity}
+        />
+        <ActiveCity
+          selectedCity={this.state.selectedCity}
+
+        />
         
       </div>
     );

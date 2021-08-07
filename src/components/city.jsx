@@ -6,17 +6,21 @@ import React, { Component } from 'react';
 
 class City extends Component {
   
-  // handleClick = () => {
-  //   const { selectFlat, index } = this.props;
+  handleClick = () => {
+    const { selectCity, index } = this.props;
+    
+    selectCity(index);
 
   //   selectFlat(index);
   //   console.log(selectFlat(index));
   // }
+  }
 
   render() {
     return (
       <div>
-        <h1 className={`${this.props.selectedCity ? 'active-city' : ''}`} >{this.props.name}</h1>
+        <h1 className={`${this.props.selectedCity ? 'active-city' : ''}`} onClick={this.handleClick}> 
+          {this.props.name}</h1>
       </div>
     );
   }
